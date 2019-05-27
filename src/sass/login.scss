@@ -1,0 +1,38 @@
+.login{
+    display: flex;
+    background: #1d202c;
+    width:100%;
+    height:100vh;
+    .signin{
+        flex-grow:1;
+        padding: 5%;
+        .logo{
+            margin-bottom: 7%;
+        }
+        form{
+
+
+            h1 {
+                color: $primary_color;
+            }
+            p{
+                color: #e4b78d;
+                font-family: "San Francisco Display Thin";
+            }
+            .form-group label {
+                color: #fff;
+            }
+            .form-control {
+                padding: 26px 27px;
+                border-radius: 0.36rem;
+            }
+        }
+    }
+    .image-login{
+        flex-grow: 3.7;
+        background-image: url(../assets/img/fondo3.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+}
