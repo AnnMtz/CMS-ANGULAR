@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12 main">
+                    <div class="section-1 border p-3">
+                        <h1 id="header-title">Notificaciones</h1>
+                        <ul class="list-group">
+                            <li class="list-group-item">Notificaciones</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
+                    <div class="control-wrapper p-0 d-flex align-items-stretch">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Agregar notificación
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <label for="title">Titulo
+                                        <input type="text">
+                                    </label><br>
+                                        <label for="content">Contenido</label>
+                                        <input type="text" class="form-control textarea-control" row="3" height="150px" name="content" id="content">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="control-wrapper p-0 d-flex align-items-stretch">
+                        <div class="btn btn-dark p-4"><i class="fas fa-map"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrapper border shadow-sm p-3">
+                        <div class="table-header">
+                            <h4 class="notification-header">Notificaciones</h4>
+                        </div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="title" scope="col">TITULO</th>
+                                    <th class="title" scope="col">CONTENIDO</th>
+                                    <th class="title" scope="col">FECHA</th>
+                                    <th class="title" scope="col">SO</th>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let notificaciones of httpResultNotificaciones | paginate: { itemsPerPage: 39, currentPage: p }">
+                                    <th class="info" scope="row">{{notificaciones.title}}</th>
+                                    <td class="info">{{notificaciones.message}}</td>
+                                    <td class="info">{{notificaciones.createdAt}}</td>
+                                    <td class="info">{{notificaciones.so}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

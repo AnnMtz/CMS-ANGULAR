@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-12">
+      <div class="table-wrapper border shadow-sm p-3">
+          <table class="table table-striped">
+              <thead>
+                  <tr>
+                      <th class="title1" scope="col">BROKER</th>
+                      <th class="title" scope="col">CORREO</th>
+                      <th class="title" scope="col">TELÉFONO</th>
+                      <th class="title" scope="col">SERVICIO</th>
+                      <th class="title" scope="col">FECHA</th>
+                      <th class="title" scope="col"></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let poliza of httpResultPoliza | paginate: { itemsPerPage: 39, currentPage: p }">
+                      
+                      <th class="info" scope="row">{{poliza.name}}</th>
+                      <td class="info">{{poliza.email}}</td>
+                      <td class="info">{{poliza.phone}}</td>
+                      <td class="info">{{poliza.service}}</td>
+                      <td class="info">{{poliza.createdAt}}</td>
+                      <td class="info"><i class="fas fa-trash btnEliminar" onclick=""></i> </td>
+                  </tr>
+              </tbody>
+          </table>
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+  </div>
+</div>

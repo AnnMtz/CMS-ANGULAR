@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12 main">
+                    <div class="section-1 border p-3">
+                        <h1 id="header-title">Propiedades</h1>
+                        <ul class="list-group">
+                            <li class="list-group-item">Propiedades</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-md-3">
+                    <div class="pink-gradient w-100 text-white">
+                        <i class="fas fa-home"></i>
+                        <p><span>27</span><br>PROPIEDADES EN TOTAL</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="green-gradient w-100 text-white">
+                        <img [src]="'/assets/img/xls.png'" alt="">
+                        <p>EXPORTAR<br>PROPIEDADES</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+                    <div class="control-wrapper p-0 d-flex align-items-stretch">
+                        <div class="btn btn-dark p-4">Nueva Propiedad</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrapper border shadow-sm p-3">
+                        <div class="table-header">
+                            <div class="form-group">
+                                <input type="text" class="control-group" placeholder="Buscar Propiedades">
+                            </div>
+                        </div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="title" scope="col">STATUS</th>
+                                    <th class="title" scope="col">BROKER</th>
+                                    <th class="title" scope="col">OPERACIÓN</th>
+                                    <th class="title" scope="col">DIRECCIÓN</th>
+                                    <th class="title" scope="col">VALOR</th>
+                                    <th class="title" scope="col">TIPO</th>
+                                    <th class="title" scope="col">FECHA</th>
+                                    <th class="title" scope="col"></th>
+                                    <th class="title" scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let propiedades of httpResultPropiedades | paginate: { itemsPerPage: 28, currentPage: p }">
+                                    <th class="info" scope="row">{{propiedades.status}}</th>
+                                    <td class="info">{{propiedades.user.name + " " + propiedades.user.lastname}}</td>
+                                    <td class="info">{{propiedades.operation.name}}</td>
+                                    <td class="info">{{propiedades.propertyAddress.stateName + ", " + propiedades.propertyAddress.municipalityName + ", " + propiedades.propertyAddress.settlementName + ", " + "CP" + propiedades.propertyAddress.postalCode + ", " + propiedades.propertyAddress.street + ", " + propiedades.propertyAddress.outNumber}}</td>
+                                    <td class="info">{{propiedades.price + " " + propiedades.currency}} </td>
+                                    <td class="info">{{propiedades.name}}</td>
+                                    <td class="info">{{propiedades.createdAt}}</td>
+                                    <td class="info"><a href="#"><button class="btn btn-form">Ver</button></a></td>
+                                    <td class="info"><i class="fas fa-trash btnEliminar" onclick=""></i> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

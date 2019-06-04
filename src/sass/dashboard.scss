@@ -1,0 +1,132 @@
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    margin-left: 16%;
+    // position: fixed;
+    width: 100%;
+    .main {
+        padding-left: 15px;
+        padding-right: 5px;
+        .section-1 {
+            #header-title {
+                text-align: left;
+                font-family: 'San Francisco Display Bold';
+                font-size: 30px;
+            }
+            .list-group {
+                display: flex;
+                flex-direction: column;
+                padding-left: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.pink-gradient {
+    background-image: linear-gradient(to bottom, #e6b88e, #d0a47b);
+    margin-right: 10px;
+    align-items: center;
+    height: 75px;
+    display: flex;
+    padding-left: 20%;
+    i {
+        margin-right: 20px;
+    }
+    p {
+        font-size: 13px;
+    }
+}
+
+.green-gradient {
+    background-image: linear-gradient(to bottom, #00e4c1, #53d0b4);
+    margin-right: 10px;
+    align-items: center;
+    height: 75px;
+    display: flex;
+    padding-left: 20%;
+    img {
+        width: 60px;
+        padding: 0px 15px 10px 5px;
+        margin-right: 5px;
+    }
+    p {
+        font-size: 13px;
+    }
+}
+
+.btn {
+    color: #fff;
+    background-color: #1d2124;
+    border-color: #171a1d;
+    width: 100%;
+    align-items: center;
+}
+
+.btnEliminar {
+    color: #50e3c2;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #50e3c2;
+    padding: 11px;
+    font-size: 16px;
+    border-radius: 50px;
+}
+
+.table-wrapper {
+    .text-header {
+        font-size: 14px;
+        color: #e6b88e;
+    }
+}
+
+.control-wrapper {
+    align-items: stretch;
+    height: 100%;
+}
+
+.form-control {
+    margin: 0;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.control-group {
+    border-radius: 50px;
+    width: 25%;
+    border: 1px solid #ced4da;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    padding-top: 6px;
+}
+
+.title {
+    font-size: 10px;
+    color: #979797;
+    font-family: 'San Francisco Display Bold';
+    text-align: left;
+}
+
+.info {
+    font-size: 12px;
+    color: #979797;
+    text-align: left;
+    font-family: 'San Francisco Display Ultralight';
+    .btn-form {
+        color: black;
+        border: 1px solid #c6c6c6;
+        width: 55px;
+        height: 30px;
+        border-radius: 21.5px;
+        font-size: 10px;
+        background: none;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0;
+}

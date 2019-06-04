@@ -1,0 +1,154 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12 main">
+                    <div class="section-1 border p-3">
+                        <h1 id="header-title">Brokers</h1>
+                        <ul class="list-group">
+                            <li class="list-group-item">Brokr</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-md-3">
+                    <div class="pink-gradient w-100 text-white">
+                        <i class="far fa-user"></i>
+                        <p><span>87</span><br>BROKRS</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="green-gradient w-100 text-white">
+                        <img [src]="'/assets/img/xls.png'" alt="">
+                        <p>EXPORTAR<br>BROKRS</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+                    <div class="control-wrapper p-0 d-flex align-items-stretch">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Nuevo Broker
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Broker</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h6>Información del Broker</h6>
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="name">Nombre</label>
+                                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Contraseña</label>
+                                                <input type="text" class="form-control" id="password">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="lastname">Apellido</label>
+                                                <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="confirmationPassword">Confirmar contraseña</label>
+                                                <input type="text" class="form-control" id="confirmationPassword">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Correo</label>
+                                                <input type="text" class="form-control" id="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">Tipo de membresia</label>
+                                                <select class="form-control w-25"></select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="birthday">Fecha de nacimiento</label>
+                                                <input type="text" class="form-control" id="birdthday">
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control w-25">
+                                                    <label for="">Rol</label>
+                                                        <option value="all" selected>APP<option>
+                                                        <option value="">ADMIN<option>
+                                                </select>
+                                            </div>
+                                            <button type="submit" class="btn btn-dark">Aceptar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrapper border shadow-sm p-3">
+                        <div class="table-header">
+                            <h3 class="text-header">Filtrar</h3>
+                            <form action="">
+                                <div class="form-group">
+                                    <select class="form-control w-25">
+												<option value="all" selected>Todos</option>
+												<option value="5c51e1f7dfff353c9fe0a639">Go Feel</option>
+												<option value="5c51e1f7dfff353c9fe0a63a">Go Grow</option>
+												<option value="5c51e1f7dfff353c9fe0a63b">Go Develop</option>
+										</select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="control-group" placeholder="Buscar Brokr">
+                                </div>
+                            </form>
+                        </div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="title" scope="col">STATUS</th>
+                                    <th class="title" scope="col">BROKER</th>
+                                    <th class="title" scope="col">RANKING</th>
+                                    <th class="title" scope="col">TELÉFONO</th>
+                                    <th class="title" scope="col">CORREO</th>
+                                    <th class="title" scope="col">FECHA</th>
+                                    <th class="title" scope="col"></th>
+                                    <th class="title" scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let brokrs of httpResultBrokrs | paginate: { itemsPerPage: 39, currentPage: p }">
+                                    <th class="info" scope="row">
+                                        <label class="c-check">
+                                          <input type="checkbox" value="1" />
+                                          <span class="c-check__view"></span>
+                                        </label>
+                                    </th>
+                                    <td class="info">{{brokrs.name + " " + brokrs.lastname}}</td>
+                                    <td class="info">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </td>
+                                    <td class="info"></td>
+                                    <td class="info">{{brokrs.email}}</td>
+                                    <td class="info">{{brokrs.createdAt}}</td>
+                                    <td class="info"><a href="#"><button class="btn btn-form">Ver</button></a></td>
+                                    <td class="info"><i class="fas fa-trash btnEliminar" onclick=""></i> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

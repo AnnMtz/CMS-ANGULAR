@@ -1,0 +1,124 @@
+.container {
+    margin-left: 16%;
+    // position: fixed;
+    width: 100%;
+    .main {
+        padding-left: 15px;
+        padding-right: 5px;
+        .section-1 {
+            #header-title {
+                text-align: left;
+                font-family: 'San Francisco Display Bold';
+                font-size: 30px;
+            }
+            .list-group {
+                display: flex;
+                flex-direction: column;
+                padding-left: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.btn {
+    color: #fff;
+    background-color: #1d2124;
+    border-color: #171a1d;
+    width: 100%;
+    align-items: center;
+}
+
+.table-wrapper {
+    .text-header {
+        font-size: 14px;
+        color: #e6b88e;
+    }
+}
+
+.control-wrapper {
+    align-items: stretch;
+    height: 100%;
+}
+
+.text-gofeel {
+    text-align: left;
+    font-family: 'San Francisco Display Bold';
+    color: black;
+    font-size: 18px;
+}
+
+.paragraph-gofeel {
+    font-size: 12px;
+    color: black;
+    font-family: 'San Francisco Display Ultralight';
+    margin-bottom: 5px;
+}
+
+.card-title {
+    padding-left: 0%;
+}
+
+.info {
+    font-size: 12px;
+    color: #979797;
+    text-align: left;
+    font-family: 'San Francisco Display Ultralight';
+    .btn-form {
+        color: black;
+        border: 1px solid #c6c6c6;
+        width: 55px;
+        height: 30px;
+        border-radius: 21.5px;
+        font-size: 10px;
+        background: none;
+    }
+}
+
+// 
+.c-check {
+    &__view {
+        box-shadow: 0px 15px 15px -8px rgba(238, 74, 69, .4);
+        display: block;
+        cursor: pointer;
+        width: 33px;
+        height: 18px;
+        background-color: #dee2e6;
+        border-radius: 25px;
+        position: relative;
+        transition: all 400ms;
+        &:before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 9px;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 4px;
+            left: 1px;
+            transition: all 400ms cubic-bezier(.175, .885, .32, 1.275);
+        }
+    }
+    input {
+        display: none;
+        &:active~.c-check__view {
+            transform: scale(.9);
+        }
+        &:checked~.c-check__view {
+            background-color: #75e681;
+            box-shadow: 0px 15px 15px -8px rgba(117, 230, 129, .4);
+            &:before {
+                width: 0;
+                border-left-width: 5px;
+                border-right-width: 5px;
+                border-radius: 10px;
+                left: 22px;
+            }
+        }
+    }
+}
+
+.ngx-pagination{
+    text-align: right;
+}

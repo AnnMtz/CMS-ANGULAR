@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12 main">
+                    <div class="section-1 border p-3">
+                        <h1 id="header-title">Terceros</h1>
+
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Buro Brokrs</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Servicios Hipotecarios</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">JusWho</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="poliza-tab" data-toggle="tab" href="#poliza" role="tab" aria-controls="profile" aria-selected="false">Poliza Jurídica</a>
+                              </li>
+                          </ul>
+                          <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <app-buro></app-buro>
+                                
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <app-servicioshipotecarios></app-servicioshipotecarios>
+                            </div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <app-juswho></app-juswho>
+                            </div>     
+                            <div class="tab-pane fade" id="poliza" role="tabpanel" aria-labelledby="poliza-tab">
+                                <app-poliza></app-poliza>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrapper border shadow-sm p-3">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="title1" scope="col">BROKER</th>
+                                    <th class="title" scope="col">MENSAJE</th>
+                                    <th class="title" scope="col">FECHA</th>
+                                    <th class="title" scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="info" scope="row">Daniel Romero</th>
+                                    <td class="info">Se porto mal</td>
+                                    <td class="info">2019-02-28</td>
+                                    <td class="info"><i class="fas fa-trash btnEliminar" onclick=""></i> </td>
+                                </tr>
+                                <tr>
+                                    <th class="info" scope="row">Hector Maya</th>
+                                    <td class="info">No paga</td>
+                                    <td class="info">2019-02-28</td>
+                                    <td class="info"><i class="fas fa-trash btnEliminar" onclick=""></i> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="footer">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-end">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Siguiente</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>

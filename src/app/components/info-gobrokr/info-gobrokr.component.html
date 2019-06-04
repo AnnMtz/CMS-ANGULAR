@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12 main">
+                    <div class="section-1 border p-3">
+                        <h1 id="header-title">Información</h1>
+                        <ul class="list-group">
+                            <li class="list-group-item">FAQS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
+                    <div class="control-wrapper p-0 d-flex align-items-stretch">
+                        <!-- <div class="btn btn-dark p-4">Nueva Pregunta</div> -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Nueva pregunta
+                                </button>
+                        <!-- Modal -->
+                        <!-- <h2>Nueva pregunta</h2> -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <h4>Nueva pregunta</h4>
+                                    <div class="modal-body">
+                                        <label for="question">Pregunta
+                                                <input type="text" class="form-control textarea-control" style="width: 29em" row="3" height="150px" name="content" id="question">
+                                            </label><br>
+                                        <label for="content">Contenido</label>
+                                        <input type="text" class="form-control textarea-control" row="3" height="150px" name="content" id="content">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrapper border shadow-sm p-3">
+                        <div class="table-header">
+                            <h4 class="notification-header">Preguntas Frecuentes</h4>
+                        </div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="title" scope="col">Pregunta</th>
+                                    <th class="title" scope="col">Respuesta</th>
+                                    <th class="title" scope="col">FECHA</th>
+                                    <th class="title" scope="col"></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="info" scope="row"></th>
+                                    <td class="info"></td>
+                                    <td class="info"></td>
+                                    <td class="info"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="footer">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Siguiente</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

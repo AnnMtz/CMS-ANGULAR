@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-12">
+      <div class="table-wrapper border shadow-sm p-3">
+          <table class="table table-striped">
+              <thead>
+                  <tr>
+                      <th class="title1" scope="col">BROKER</th>
+                      <th class="title" scope="col">MENSAJE</th>
+                      <th class="title" scope="col">FECHA</th>
+                      <th class="title" scope="col"></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let buro of httpResultBuro | paginate: { itemsPerPage: 39, currentPage: p }">
+                      <th class="info" scope="row">{{buro.user.name + " " + buro.user.lastname}}</th>
+                      <td class="info">{{buro.message}}</td>
+                      <td class="info">{{buro.createdAt}}</td>
+                      <td class="info"><i class="fas fa-trash btnEliminar" onclick=""></i> </td>
+                  </tr>
+              </tbody>
+          </table>
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+  </div>
+</div>

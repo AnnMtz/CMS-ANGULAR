@@ -1,0 +1,84 @@
+.container-fluid {
+    position: fixed;
+    padding: 0;
+    display: inline;
+    height: 100%;
+    .main-aside {
+        display: inline-block;
+        padding: 0;
+        background: #1d202c;
+        box-sizing: border-box;
+        height: 100%;
+        .nav-header {
+            width: 100%;
+            margin-bottom: 14%;
+            text-align: center;
+            .main-logo {
+                width: 45%;
+                padding-top: 10%;
+            }
+        }
+        .profile {
+            width: 100%;
+            margin-bottom: 14%;
+            text-align: center;
+            .profile-img {
+                border-radius: 50%;
+                border: 2px solid #e6b88e;
+                width: 70px;
+                height: 70px;
+                padding: 10px;
+            }
+            #admin {
+                color: #e6b88e;
+                font-family: 'San Francisco Display Ultralight';
+                font-size: 12px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 0.9px;
+                text-align: center;
+                padding-top: 16px;
+            }
+        }
+        .left-menu {
+            .sidebar {
+                .nav {
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    background: #1d202c;
+                    .nav-item {
+                        border-top: 1px solid gray;
+                        color: #fff;
+                        font-size: 12px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: normal;
+                        letter-spacing: 0.6px;
+                        text-align: center;
+                        padding-bottom: 10px;
+                        padding-top: 10px;
+                        font-family: 'San Francisco Display Ultralight', sans-serif;
+                        a {
+                            text-decoration: none;
+                            color: #fff;
+                            font-size: 10px
+                        }
+                    }
+                    .nav-item:hover {
+                        cursor: pointer;
+                        background: gray;
+                        color: #fff;
+                        opacity: 0.5;
+                    }
+                    .nav-item:last-of-type {
+                        border-bottom: 1px solid gray;
+                    }
+                }
+            }
+        }
+    }
+}

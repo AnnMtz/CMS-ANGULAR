@@ -1,0 +1,88 @@
+.container {
+    margin-left: 16%;
+    width: 100%;
+    .main {
+        padding-left: 15px;
+        padding-right: 5px;
+        .section-1 {
+            margin-bottom: 10%;
+            #header-title {
+                text-align: left;
+                font-family: 'San Francisco Display Bold';
+                font-size: 30px;
+            }
+            .list-group {
+                display: flex;
+                flex-direction: column;
+                padding-left: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.btn {
+    color: #fff;
+    background-color: #1d2124;
+    border-color: #171a1d;
+    width: 100%;
+    align-items: center;
+}
+
+.table-wrapper {
+    .text-header {
+        font-size: 14px;
+        color: #e6b88e;
+    }
+}
+
+.control-wrapper {
+    align-items: stretch;
+    height: 100%;
+}
+
+.text-gofeel {
+    text-align: left;
+    font-family: 'San Francisco Display Bold';
+    color: black;
+    font-size: 18px;
+}
+
+.paragraph-gofeel {
+    font-size: 12px;
+    color: black;
+    font-family: 'San Francisco Display Ultralight';
+    margin-bottom: 5px;
+}
+
+.card-title {
+    padding-left: 14%;
+    padding-right: 14%;
+}
+
+.text-terceros {
+    padding-left: 12%;
+}
+
+.title {
+    padding-right: 10%;
+    padding-left: 12%;
+}
+
+.title1 {
+    padding-right: 10%;
+    font-size: 10px;
+    color: #979797;
+    font-family: 'San Francisco Display Bold';
+    text-align: left;
+}
+
+.btnEliminar {
+    color: #50e3c2;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #50e3c2;
+    padding: 11px;
+    font-size: 16px;
+    border-radius: 50px;
+}
